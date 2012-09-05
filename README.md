@@ -14,5 +14,8 @@ The result may be one of Unisex, Male, Female, MostlyMale, or
 MostlyFemale. Any unknown name is considered Unisex, unless you use
 `Detector.getGenderOpt`:
 
-    Detector.getGenderOpt("Jordan")  // MostlyMale
+    Detector.getGenderOpt("Jordan")  // Some(MostlyMale)
     Detector.getGenderOpt("Jordano") // None
+    
+`getGenderOpt` returns `None` if the library has no data for
+the specified name.
